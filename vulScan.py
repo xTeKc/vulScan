@@ -9,3 +9,7 @@ def request(url):
 
 target_url = 'enter-webpage-url'
 response = request(target_url)
+
+parsed_html = BeautifulSoup(response.content)
+forms_list = parsed_html.findAll('form-on-page')
+print(forms_list)
