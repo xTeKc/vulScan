@@ -1,5 +1,6 @@
 import requests
 from BeautifulSoup import BeautifulSoup
+import urlparse
 
 def request(url):
     try:
@@ -20,6 +21,8 @@ forms_list = parsed_html.findAll('form-on-page')
 #get nested elements inside specified element ^
 for form in forms_list:
     action = form.get('action-nested-elem')
+    #join two urls
+    post_url = urlparse.urljoin(target_url, action)
     print(action)
     method = form.get('method-nested-elem')
     print(method)
