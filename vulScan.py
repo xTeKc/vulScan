@@ -33,3 +33,7 @@ for form in forms_list:
         #get input name that is nested in input
         input_name = input.get('name-nested-input')
         #print(input_name)
+        input_type = input.get('type-nested-input')
+        input_value = input.get('value-nested-input')
+        if input_type == 'text':
+            input_value = 'test'
