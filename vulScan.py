@@ -25,5 +25,6 @@ for form in forms_list:
     print(method)
 
     inputs_list = form.findAll('input-nested-elem')
-    for  input in inputs_list:
-        print(input)
+    for input in inputs_list:
+        input_name = input.get('name')
+        print(input_name)
