@@ -23,7 +23,7 @@ for form in forms_list:
     action = form.get('action-nested-elem')
     #join two urls
     post_url = urlparse.urljoin(target_url, action)
-    print(action)
+    print(post_url)
     method = form.get('method-nested-elem')
     print(method)
 
