@@ -23,3 +23,7 @@ for form in forms_list:
     print(action)
     method = form.get('method-nested-elem')
     print(method)
+
+    inputs_list = form.findAll('input-nested-elem')
+    for  input in inputs_list:
+        print(input)
