@@ -23,12 +23,13 @@ for form in forms_list:
     action = form.get('action-nested-elem')
     #join two urls
     post_url = urlparse.urljoin(target_url, action)
-    print(post_url)
+    #print(post_url)
+
     method = form.get('method-nested-elem')
-    print(method)
+    #print(method)
 
     inputs_list = form.findAll('input-nested-elem')
     for input in inputs_list:
         #get input name that is nested in input
         input_name = input.get('name-nested-input')
-        print(input_name)
+        #print(input_name)
