@@ -14,6 +14,7 @@ response = request(target_url)
 
 #parse diff elements of html on webpage
 parsed_html = BeautifulSoup(response.content)
+#specify element in html
 forms_list = parsed_html.findAll('form-on-page')
 print(forms_list)
 
