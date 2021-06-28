@@ -17,6 +17,7 @@ parsed_html = BeautifulSoup(response.content)
 #specify element in html
 forms_list = parsed_html.findAll('form-on-page')
 
+#get nested elements inside specified element ^
 for form in forms_list:
-    form.get('action')
+    action = form.get('action')
     print(action)
