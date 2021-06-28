@@ -14,7 +14,7 @@ response = request(target_url)
 
 #parse diff elements of html on webpage
 parsed_html = BeautifulSoup(response.content)
-#specify element in html
+#find specific element in html
 forms_list = parsed_html.findAll('form-on-page')
 
 #get nested elements inside specified element ^
