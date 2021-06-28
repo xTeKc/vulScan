@@ -19,7 +19,7 @@ forms_list = parsed_html.findAll('form-on-page')
 
 #get nested elements inside specified element ^
 for form in forms_list:
-    action = form.get('action')
+    action = form.get('action-nested-elem')
     print(action)
-    method = form.get('method')
+    method = form.get('method-nested-elem')
     print(method)
