@@ -1,5 +1,6 @@
 import requests
 import re
+import urlparse
 
 class vScan:
     def __init__(self, url):
