@@ -16,5 +16,6 @@ response = request(target_url)
 parsed_html = BeautifulSoup(response.content)
 #specify element in html
 forms_list = parsed_html.findAll('form-on-page')
-print(forms_list)
 
+for form in forms_list:
+    print(form)
