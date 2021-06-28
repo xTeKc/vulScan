@@ -29,6 +29,7 @@ for form in forms_list:
     #print(method)
 
     inputs_list = form.findAll('input-nested-elem')
+    post_data = {}
     for input in inputs_list:
         #get input name that is nested in input
         input_name = input.get('name-nested-input')
