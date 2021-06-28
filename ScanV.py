@@ -2,7 +2,7 @@ import requests
 import re
 import urlparse
 
-class vScan:
+class ScanV:
     def __init__(self, url):
         self.target_url = url
         self.target_links = []
