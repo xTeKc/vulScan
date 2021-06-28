@@ -18,4 +18,5 @@ parsed_html = BeautifulSoup(response.content)
 forms_list = parsed_html.findAll('form-on-page')
 
 for form in forms_list:
-    print(form)
+    form.get('action')
+    print(action)
