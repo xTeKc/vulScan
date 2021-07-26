@@ -1,6 +1,6 @@
 import requests
 import re
-import urlparse
+import urllib.parse
 
 class ScanV:
     def __init__(self, url):
