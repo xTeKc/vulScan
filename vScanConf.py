@@ -9,7 +9,7 @@ class ScanV:
     
     def extract_links_from(self, url):
         response = requests.get(url)
-        return re.findAll('(?:href=")(.*?)"', response.content)
+        return re.findall('(?:href=")(.*?)"', response.content)
 
     def crawl(self, url):
         href_links = self.extract_links_from(url)
