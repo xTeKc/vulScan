@@ -1,6 +1,6 @@
 import requests
 import re
-import urllib.parse
+from urllib.parse import urljoin
 
 class ScanV:
     def __init__(self, url):
@@ -14,7 +14,7 @@ class ScanV:
     def crawl(self, url):
         href_links = self.extract_links_from(url)
         for link in href_links:
-            link = urlparse.urljoin(url, link)
+            link = urljoin(url, link)
 
             if '#' in link:
                 link = link.split('#')[0]
