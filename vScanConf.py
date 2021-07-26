@@ -10,8 +10,10 @@ class ScanV:
     def extract_links_from(self, url):
         response = requests.get(url)
         return re.findall('(?:href=")(.*?)"', response.text)
-
-    def crawl(self, url):
+    
+    def crawl(self, url=None):  #set default <url> value to <None>
+        if url == None:
+            url = self.target_url
         href_links = self.extract_links_from(url)
         for link in href_links:
             link = urljoin(url, link)
