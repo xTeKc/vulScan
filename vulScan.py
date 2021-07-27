@@ -18,3 +18,6 @@ vuln_scanner.crawl()
 #response = vuln_scanner.submit_form(forms[0], "test-test", input(f"Enter WebPage URL: "))
 #print(response.content)  #print test-test into form on entered webpage
 
+#replace with currenct response if needed
+#response = vuln_scanner.test_xss_in_form(forms[0], input(f"Enter WebPage URL: "))
+#print(response)  #print response for xss vulnerability testing
