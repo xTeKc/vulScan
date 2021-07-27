@@ -1,6 +1,7 @@
 import requests
 import re
 from urllib.parse import urljoin
+from BeautifulSoup import BeautifulSoup
 
 class ScanV:
     def __init__(self, url):  #, ignore_links  #add ignore_links as arg
@@ -28,3 +29,7 @@ class ScanV:
                 print(link)
                 self.crawl(link)
 
+    def extract_form(self, url):
+        response = self.session.get(url)
+        parsed_html = BeautifulSoup(response.content)
+        return parsed_html.findall("form")
