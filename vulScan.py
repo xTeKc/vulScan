@@ -13,5 +13,6 @@ response = vuln_scanner.session.post(target_url, data = data_dict)  #response to
 
 vuln_scanner.crawl()
 
-
+#forms = vuln_scanner.extract_form(input(f"Enter WebPage URL: "))  #extract_form from webpage
+#print(forms)  #print the forms from webpage
 
