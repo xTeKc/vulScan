@@ -84,4 +84,4 @@ class ScanV:
         #    return True
         return xss_test_script in response.content  #optional refactor (auto)
         
-    
+    #implement more methods of different vulnerabilities
