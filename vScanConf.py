@@ -1,7 +1,7 @@
 import requests
 import re
 from urllib.parse import urljoin
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 
 class ScanV:
     def __init__(self, url):  #, ignore_links  #add ignore_links as arg
