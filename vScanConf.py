@@ -3,7 +3,7 @@ import re
 from urllib.parse import urljoin
 
 class ScanV:
-    def __init__(self, url):
+    def __init__(self, url):  #, ignore_links  #add ignore_links as arg
         self.session = requests.Session()  #add session
         self.target_url = url
         self.target_links = []
