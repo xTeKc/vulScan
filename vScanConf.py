@@ -33,3 +33,23 @@ class ScanV:
         response = self.session.get(url)
         parsed_html = BeautifulSoup(response.content)
         return parsed_html.findall("form")
+    
+    def submit_form(self, form, value, url):
+        action = form.get("action")
+        post_url = urljoin(url, action)
+        method = form.get("method")
+        
+        inputs_list = form.findall("input")
+        post_data = {}
+        for input in inputs_list:
+            input_name = input.get("name")
+            input_type = input.get("type")
+            input_value = input.get("value")
+            if input_type == "text":
+                input_value = value
+                
+            post_data[input_name] = input_value
+        if method == "post":
+            return self.session.post(post_url, data = post_data)
+        return self.session.get(post_url, params = post_data)
+    
