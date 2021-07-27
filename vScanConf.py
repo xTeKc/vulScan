@@ -66,13 +66,15 @@ class ScanV:
         xss_test_script = "<scRipt>alert(XSS Test)</sCript>" #modify script word if med sec webpage
         url = url.replace(f'"=", "=" {xss_test_script}')
         response = self.session.get(url)
-        if xss_test_script in response.content:
-            return True
+        #if xss_test_script in response.content:  
+        #    return True
+        return xss_test_script in response.content  #optional refactor (auto)
                 
     def test_xss_in_form(self, form, url):  #add to run scanner func?
         xss_test_script = "<scRipt>alert(XSS Test)</sCript>" #modify script word if med sec webpage
         response = self.submit_form(form, xss_test_script, url)
-        if xss_test_script in response.content:
-            return True
+        #if xss_test_script in response.content:
+        #    return True
+        return xss_test_script in response.content  #optional refactor (auto)
         
     
