@@ -2,14 +2,14 @@
 
 ---
 
-##### Features:
+#### Features:
 
 + Crawl website & all subdomains of that website
 + Ability to crawl login pages using a Session
 + Option to include an ignore webpage link list
 + Extract & submit forms automatically
 
-##### Use:
+#### Use:
 
 + Open terminal & go to directory of choice (ex: `cd Documents/` )
 + Clone repo: `git clone https://github.com/xTeKc/vulScan.git`
