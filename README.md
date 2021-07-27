@@ -8,7 +8,7 @@
 + Ability to crawl login pages using a Session
 + Option to include an ignore webpage link list
 + Extract & submit forms automatically
-
++ Discover XSS vulnerabilities
 
 ---
 
