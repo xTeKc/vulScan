@@ -3,6 +3,8 @@ import requests  #refactor remove?
 
 #input target webpage url
 target_url = input(f"Enter WebPage URL: ")
+#links_to_ignore = [""]  #enter links to ignore for session
+
 data_dict = {"username": "admin", "password": "password", "Login": "submit"}  #login session
 
 vuln_scanner = vScanConf.ScanV(target_url)
