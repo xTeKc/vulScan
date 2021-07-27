@@ -9,6 +9,13 @@
 + Option to include an ignore webpage link list
 + Extract & submit forms automatically
 
+
+---
+
+### GUI Coming Soon!
+
+---
+
 #### Use:
 
 + Open terminal & go to directory of choice (ex: `cd Documents/` )
