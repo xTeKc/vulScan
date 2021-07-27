@@ -24,3 +24,5 @@
 + Run: `python vulScan.py`
 + You will then be prompted to enter a webpage
 + Webpage format: `http://` or `https://` before the webpage link
++ Enter webpage link: `http://<name-of-webpage>` or `https://<name-of-webpage>`
+#### Enjoy! :smirk:
