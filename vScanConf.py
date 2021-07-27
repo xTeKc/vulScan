@@ -62,3 +62,9 @@ class ScanV:
             if "=" in link:
                 print(f"Testing {link}")
                 
+    def test_xss_in_form(self, form, url):
+        xss_test_script = "<scRipt>alert(XSS Test)</sCript>" #modify script word if med sec webpage
+        response = self.submit_form(form, xss_test_script, url)
+        if xss_test_script in response.content:
+            return True
+        
