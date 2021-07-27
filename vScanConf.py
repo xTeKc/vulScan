@@ -62,9 +62,17 @@ class ScanV:
             if "=" in link:
                 print(f"Testing {link}")
                 
+    def test_xss_in_link(self, url):
+        xss_test_script = "<scRipt>alert(XSS Test)</sCript>" #modify script word if med sec webpage
+        url = url.replace(f"=", "=" {xss_test_script})
+        response = self.session.get(url)
+        if xss_test_script in response.content:
+            return True
+                
     def test_xss_in_form(self, form, url):  #add to run scanner func?
         xss_test_script = "<scRipt>alert(XSS Test)</sCript>" #modify script word if med sec webpage
         response = self.submit_form(form, xss_test_script, url)
         if xss_test_script in response.content:
             return True
         
+    
