@@ -58,9 +58,16 @@ class ScanV:
             forms = self.extract_form(link)
             for form in forms:
                 print(f"Testing form in {link}")
+                is_vuln_to_xss = self.test_xss_in_form(form, link)
+                if is_vuln_to_xss:
+                    print(f"\n\n*[***] XSS discovered in {link} in the following form")
+                    print(form)  #discovered vul in form
                 
             if "=" in link:
                 print(f"Testing {link}")
+                is_vuln_to_xss = self.test_xss_in_link(link)
+                if is_vuln_to_xss:
+                    print(f"\n\n*[***] discovered XSS {link}")  #discovered vul in link
                 
     def test_xss_in_link(self, url):
         xss_test_script = "<scRipt>alert(XSS Test)</sCript>" #modify script word if med sec webpage
