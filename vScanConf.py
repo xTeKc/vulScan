@@ -23,8 +23,8 @@ class ScanV:
             if '#' in link:
                 link = link.split('#')[0]
 
-            if self.target_url in link and link not in self.target_links:
-                self.target_links.append(link)
+            if self.target_url in link and link not in self.target_links:  #and link not in self.links_to_ignore
+                self.target_links.append(link)                             #add to use links_to_ignore during crawl
                 print(link)
                 self.crawl(link)
 
