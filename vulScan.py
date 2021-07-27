@@ -1,4 +1,5 @@
 import vScanConf
+import requests
 
 #input target webpage url
 target_url = input(f"Enter WebPage URL: ")
