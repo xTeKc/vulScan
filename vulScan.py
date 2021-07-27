@@ -12,6 +12,7 @@ response = vuln_scanner.session.post(target_url, data = data_dict)  #response to
 #vuln_scanner.session.post(input(f"Enter WebPage URL: "), data = data_dict)  #refactored version
 
 vuln_scanner.crawl()
+vuln_scanner.run_scanner()  #run vuln scanner
 
 #forms = vuln_scanner.extract_form(input(f"Enter WebPage URL: "))  #extract_form from webpage
 #print(forms)  #print the forms from webpage
@@ -25,3 +26,4 @@ vuln_scanner.crawl()
 #replace with current response if needed
 #response = vuln_scanner.test_xss_in_link(input(f"Enter WebPage URL: "))  #enter url
 #print(response)  #print response for xss link vulnerability testing
+
