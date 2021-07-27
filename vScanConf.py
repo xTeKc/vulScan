@@ -64,7 +64,7 @@ class ScanV:
                 
     def test_xss_in_link(self, url):
         xss_test_script = "<scRipt>alert(XSS Test)</sCript>" #modify script word if med sec webpage
-        url = url.replace(f"=", "=" {xss_test_script})
+        url = url.replace(f'"=", "=" {xss_test_script}')
         response = self.session.get(url)
         if xss_test_script in response.content:
             return True
