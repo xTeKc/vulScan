@@ -4,11 +4,12 @@ from urllib.parse import urljoin
 
 class ScanV:
     def __init__(self, url):
+        self.session = requests.Session()  #add session
         self.target_url = url
         self.target_links = []
     
     def extract_links_from(self, url):
-        response = requests.get(url)
+        response = self.session.get(url)  #get session
         return re.findall('(?:href=")(.*?)"', response.text)
     
     def crawl(self, url=None):  #set default <url> value to <None>
