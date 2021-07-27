@@ -7,6 +7,7 @@ class ScanV:
         self.session = requests.Session()  #add session
         self.target_url = url
         self.target_links = []
+       #self.links_to_ignore = ignore_links
     
     def extract_links_from(self, url):
         response = self.session.get(url)  #get session
