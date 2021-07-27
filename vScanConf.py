@@ -53,3 +53,12 @@ class ScanV:
             return self.session.post(post_url, data = post_data)
         return self.session.get(post_url, params = post_data)
     
+    def run_scanner(self):
+        for link in self.target_links:
+            forms = self.extract_form(link)
+            for form in forms:
+                print(f"Testing form in {link}")
+                
+            if "=" in link:
+                print(f"Testing {link}")
+                
